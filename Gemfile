@@ -31,7 +31,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'capistrano', '~>2.15.5', :require => false
+  gem 'capistrano', '2.15.5'
   gem 'capistrano-ext', :require => false
   gem 'capistrano_colors', :require => false
 end

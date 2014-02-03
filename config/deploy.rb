@@ -1,6 +1,9 @@
 require "bundler/capistrano"
 require "capistrano_colors"
 
+set :whenever_command, "bundle exec whenever"
+require "whenever/capistrano"
+
 set :application, "challenge"
 set :repository,  "https://github.com/hori-1923/ApiChallenge2.git"
 set :user, "hori"

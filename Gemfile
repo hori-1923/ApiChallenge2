@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'feed-normalizer'
 
+gem 'whenever', :require => false
+
 group :production do
  gem "therubyracer", :platforms => :ruby
  gem "mysql2", '0.3.13'

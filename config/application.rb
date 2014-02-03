@@ -6,12 +6,15 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-# autoload
 #config.autoload_paths += %W(#{config.root}/lib)
 #config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
 module ApiChallenge2
   class Application < Rails::Application
+    config.time_zone = 'Tokyo'
+    
+    config.autoload_paths += %W(#{config.root}/lib)
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

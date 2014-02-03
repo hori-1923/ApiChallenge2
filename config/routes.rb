@@ -6,6 +6,9 @@ ApiChallenge2::Application.routes.draw do
     namespace :v1 do
       resources :sites, only: [:index, :show, :create, :update, :destroy]
       resources :entrys, only: [:index, :show, :create, :update, :destroy]
+      scope :ranking, as: :ranking do
+        get '/' => 'entrys#ranking'
+      end
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

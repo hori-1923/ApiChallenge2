@@ -11,6 +11,12 @@ RailsAdmin.config do |config|
   # or for a more dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
 
+  config.authorize_with do
+      authenticate_or_request_with_http_basic('Admin page') do |username, password|
+      username == 'hori' && password == 'hori'
+    end
+  end
+  
   # RailsAdmin may need a way to know who the current user is]
   config.current_user_method {  } # auto-generated
 

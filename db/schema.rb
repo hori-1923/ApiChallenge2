@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140203143150) do
   create_table "entries", force: true do |t|
     t.integer  "site_id"
     t.string   "title"
-    t.string   "url"
+    t.string   "url",        limit: 1024
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "view_count"
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20140203143150) do
 
   create_table "sites", force: true do |t|
     t.string   "name"
-    t.string   "url"
-    t.string   "rss_url"
+    t.string   "url",        limit: 1024
+    t.string   "rss_url",    limit: 1024
     t.datetime "created_at"
     t.datetime "updated_at"
   end
